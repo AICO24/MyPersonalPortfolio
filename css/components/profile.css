@@ -10,20 +10,48 @@
   height: 140px;
   margin: 0 auto 20px;
   cursor: pointer;
+  perspective: 900px;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+  border: 3px solid var(--accent);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-carousel:hover .avatar-wrapper {
+  border-color: var(--accent-hover);
+  box-shadow: 0 14px 28px -4px rgba(59, 130, 246, 0.3);
 }
 
 .avatar {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 9px;
   object-fit: cover;
-  border: 4px solid var(--accent);
-  transition: transform 0.3s ease;
   display: block;
+  pointer-events: none;
+  transform: scale(1.08);
+  will-change: transform;
+  transition: opacity 0.25s ease;
 }
 
-.avatar-carousel:hover .avatar {
-  transform: scale(1.02);
+.avatar-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: 9px;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 65%);
+  opacity: 0;
+  mix-blend-mode: overlay;
+  transition: opacity 0.2s ease;
 }
 
 .name {

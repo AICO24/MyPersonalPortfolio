@@ -16,11 +16,7 @@ export function initCarousel() {
   let currentImageIndex = 0;
 
   if (avatarCarousel && profileImage && profileImages.length > 0) {
-    avatarCarousel.addEventListener('mouseenter', () => {
-      currentImageIndex = (currentImageIndex + 1) % profileImages.length;
-      profileImage.src = profileImages[currentImageIndex];
-    });
-
+    // Click to cycle through available profile photos
     avatarCarousel.addEventListener('click', (e) => {
       e.preventDefault();
       currentImageIndex = (currentImageIndex + 1) % profileImages.length;
