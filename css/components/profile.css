@@ -1,6 +1,6 @@
 /* ===== Profile Section ===== */
 .profile-section {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   text-align: center;
 }
 
@@ -17,24 +17,24 @@
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   transform-style: preserve-3d;
   will-change: transform;
   border: 3px solid var(--accent);
-  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .avatar-carousel:hover .avatar-wrapper {
   border-color: var(--accent-hover);
-  box-shadow: 0 14px 28px -4px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 14px 28px -4px rgba(56, 189, 248, 0.35);
 }
 
 .avatar {
   width: 100%;
   height: 100%;
-  border-radius: 9px;
+  border-radius: 11px;
   object-fit: cover;
   display: block;
   pointer-events: none;
@@ -46,7 +46,7 @@
 .avatar-glare {
   position: absolute;
   inset: 0;
-  border-radius: 9px;
+  border-radius: 11px;
   pointer-events: none;
   background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 65%);
   opacity: 0;
@@ -55,69 +55,82 @@
 }
 
 .name {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 4px;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
   color: var(--text);
+  line-height: 1.2;
 }
 
 .title {
   font-size: 0.95rem;
   color: var(--accent);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 .location {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
+/* ===== Action CTA Buttons ===== */
 .cta-buttons {
   display: flex;
-  flex-direction: column;
   gap: 10px;
-  margin-top: 20px;
+  margin: 18px 0;
 }
 
 .btn {
-  padding: 10px 16px;
-  border: none;
+  padding: 8px 16px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
 }
 
 .btn-primary {
-  background: var(--accent);
-  color: white;
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(56, 189, 248, 0.35);
 }
 
 .btn-secondary {
-  background: transparent;
+  background: var(--bg);
   color: var(--text);
   border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-  background: var(--bg);
+  background: var(--bg-card-hover);
   border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
 /* ===== Sidebar Content Sections ===== */
 .sidebar-section {
-  margin-bottom: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -126,29 +139,31 @@
 }
 
 .section-title {
-  font-size: 1rem;
+  font-size: 0.82rem;
   font-weight: 700;
   margin-bottom: 12px;
   color: var(--text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .sidebar-section p {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 /* ===== Tech Stack Section ===== */
 .tech-categories {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .tech-category h4 {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--text-muted);
   margin-bottom: 6px;
 }
 
@@ -161,40 +176,34 @@
 .tech-tag {
   display: inline-block;
   padding: 4px 10px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--tag-text);
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .tech-tag:hover {
   border-color: var(--accent);
   color: var(--accent);
+  transform: translateY(-1px);
 }
 
-/* ===== Profile Responsive Rules ===== */
+/* ===== Responsive Adjustments ===== */
 @media (max-width: 768px) {
   .profile-section {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
   }
 
   .avatar-carousel {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
   }
 
   .name {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
-
-@media (max-width: 480px) {
-  .cta-buttons {
-    flex-direction: column;
-  }
-}
-

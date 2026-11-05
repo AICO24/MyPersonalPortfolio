@@ -3,7 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Personal Portfolio</title>
+  <title>Manolo Gochaico Jr. | Full-Stack Web Developer</title>
+  <meta name="description" content="Personal portfolio of Manolo Gochaico Jr. — Aspiring Full-Stack Web Developer specializing in modern web and mobile applications with React Native, TypeScript, and PHP/Python." />
+  
+  <!-- Zero-FOUT Theme Initialization -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark');
+        document.addEventListener('DOMContentLoaded', () => document.body.classList.add('dark'));
+      }
+    })();
+  </script>
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,142 +35,204 @@
           </div>
           <h1 class="name">Manolo Gochaico Jr.</h1>
           <p class="title">Aspiring Full-Stack Web Developer</p>
-          <p class="location">Caloocan City, Philippines</p>
+          <p class="location">📍 Caloocan City, Philippines</p>
+          
+          <!-- Live Availability Status Badge -->
+          <div class="status-badge" aria-label="Current status: Available for junior roles and freelance">
+            <span class="status-dot"></span>
+            <span class="status-text">Available for Junior Roles & Freelance</span>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="cta-buttons">
+            <a href="mailto:mjgochaico24@gmail.com" class="btn btn-primary">Get In Touch</a>
+            <a href="#projects" class="btn btn-secondary">View Work</a>
+          </div>
         </div>
 
-        <!-- About Section -->
-        <section class="sidebar-section">
-          <h3 class="section-title">About</h3>
-          <p>I'm a 3rd year college student exploring the world of technology. I'm passionate about learning, building small projects, and improving my skills step by step. I enjoy both frontend and backend development, and I'm eager to grow through practice and real-world experience.</p>
-        </section>
+        <!-- Sticky Section Navigation (Scroll-Spy) -->
+        <nav class="sidebar-nav" aria-label="Section navigation">
+          <ul class="nav-links">
+            <li><a href="#about" class="nav-link active"><span class="nav-indicator"></span>About</a></li>
+            <li><a href="#experience" class="nav-link"><span class="nav-indicator"></span>Experience</a></li>
+            <li><a href="#projects" class="nav-link"><span class="nav-indicator"></span>Projects</a></li>
+            <li><a href="#skills" class="nav-link"><span class="nav-indicator"></span>Tech Stack</a></li>
+            <li><a href="#certifications" class="nav-link"><span class="nav-indicator"></span>Certifications</a></li>
+          </ul>
+        </nav>
 
-        <!-- Tech Stack Section -->
+        <!-- Social Connect Links -->
         <section class="sidebar-section">
-          <h3 class="section-title">Tech Stack</h3>
-          <div class="tech-categories">
-            <div class="tech-category">
-              <h4>Frontend</h4>
-              <div class="tech-tags">
-                <span class="tech-tag">HTML</span>
-                <span class="tech-tag">CSS</span>
-                <span class="tech-tag">JavaScript</span>
-              </div>
-            </div>
-            <div class="tech-category">
-              <h4>Backend</h4>
-              <div class="tech-tags">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">PHP</span>
-                <span class="tech-tag">Java</span>
-              </div>
-            </div>
-            <div class="tech-category">
-              <h4>Mobile</h4>
-              <div class="tech-tags">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">C#</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Social Links -->
-        <section class="sidebar-section">
-          <h3 class="section-title">Social Links</h3>
+          <h3 class="section-title">Connect</h3>
           <ul class="social-list">
-            <li><a href="https://github.com/AICO24" target="_blank">GitHub</a></li>
-            <li><a href="mailto:mjgochaico24@gmail.com">Email</a></li>
+            <li><a href="https://github.com/AICO24" target="_blank" rel="noopener noreferrer" class="social-link">GitHub ↗</a></li>
+            <li><a href="mailto:mjgochaico24@gmail.com" class="social-link">Email ↗</a></li>
           </ul>
         </section>
 
         <!-- Theme Toggle -->
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <div class="theme-toggle-wrapper">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙 Switch Theme</button>
+        </div>
       </div>
     </aside>
 
     <!-- Main Content -->
     <main class="main-content">
+      <!-- About Section -->
+      <section id="about" class="main-section">
+        <h2 class="main-title">About Me</h2>
+        <div class="about-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 28px;">
+          <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text); margin-bottom: 16px;">
+            I am a 3rd-year college student and aspiring <strong>Full-Stack Web Developer</strong> with a strong commitment to building performant, modern, and user-focused digital experiences. I enjoy turning complex problems into intuitive web and mobile solutions.
+          </p>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 16px;">
+            My technical focus centers on modern frontend architectures, clean state management, RESTful APIs, and relational databases. I believe in writing readable, maintainable code and continuously exploring new frameworks and architectural patterns.
+          </p>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted);">
+            When I'm not writing code, I actively study emerging software patterns, refine personal projects, and contribute to developer learning communities.
+          </p>
+        </div>
+      </section>
+
       <!-- Experience Section -->
       <section id="experience" class="main-section">
-        <h2 class="main-title">Experience</h2>
+        <h2 class="main-title">Experience & Journey</h2>
         <div class="experience-list">
           <div class="experience-item">
             <div class="experience-header">
-              <h3>School Projects & Learning</h3>
+              <h3>School Projects & Academic Development</h3>
               <span class="year">In Progress</span>
             </div>
-            <p class="company">3rd Year College</p>
-            <p class="description">Focused on building foundational skills through coursework, group projects, and self-directed learning. Exploring both frontend and backend development.</p>
+            <p class="company">3rd Year College — Caloocan City</p>
+            <p class="description">Building foundational and intermediate engineering skills through university coursework, team collaborations, and real-world system requirements. Exploring full-stack lifecycles from architecture diagrams to database integration.</p>
           </div>
           <div class="experience-item">
             <div class="experience-header">
-              <h3>Self-Learning Projects</h3>
+              <h3>Self-Directed Software Engineering</h3>
               <span class="year">Ongoing</span>
             </div>
-            <p class="company">Independent Study</p>
-            <p class="description">Building small practice projects to solidify concepts and explore new technologies. Focus on learning best practices and improving code quality.</p>
+            <p class="company">Independent Practice</p>
+            <p class="description">Developing practical, scalable applications to master modern frontend and backend technologies. Emphasizing clean folder structures, modular vanilla JavaScript, responsive CSS design systems, and database relationships.</p>
           </div>
         </div>
       </section>
 
       <!-- Projects Section -->
       <section id="projects" class="main-section">
-        <h2 class="main-title">Projects</h2>
+        <h2 class="main-title">Featured Projects</h2>
         <div class="projects-grid">
-          <article class="project-card" data-title="Sample Project One" data-desc="A school project or practice work built to learn and explore. Showcases basic to intermediate skills." data-img="assets/images/projects/architecture/SystemArchitectureProject1.png" data-link="#">
-            <img src="assets/images/projects/architecture/SystemArchitectureProject1.png" alt="Project 1" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+          <article class="project-card" data-title="System Architecture 1 Project" data-desc="Class project documenting system components and data flow. Includes diagrams and notes used to understand architecture decisions and trade-offs." data-img="assets/images/projects/architecture/SystemArchitectureProject1.png" data-link="#">
+            <div class="project-image-wrapper">
+              <img src="assets/images/projects/architecture/SystemArchitectureProject1.png" alt="System Architecture 1 Project" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+            </div>
             <div class="project-info">
               <h3>System Architecture 1 Project</h3>
-                <p>Class project documenting system components and data flow. Includes diagrams and notes used to understand architecture decisions and trade-offs.</p>
-              <a href="#" class="project-link">View</a>
+              <p>Class project documenting system components and data flow. Includes diagrams and notes used to understand architecture decisions and trade-offs.</p>
+              <div class="project-footer">
+                <span class="project-link">Inspect Case Study →</span>
+              </div>
             </div>
           </article>
-          <article class="project-card" data-title="Sample Project Two" data-desc="A learning-focused project demonstrating skills in problem-solving and practical implementation." data-img="assets/images/projects/architecture/SystemProject2.png" data-link="#">
-            <img src="assets/images/projects/architecture/SystemArchitectureProject2.png" alt="Project 2" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+          <article class="project-card" data-title="System Architecture 2 Project" data-desc="A hands-on exercise to implement modular components and simple integrations — focused on practical problem solving and documenting the process." data-img="assets/images/projects/architecture/SystemProject2.png" data-link="#">
+            <div class="project-image-wrapper">
+              <img src="assets/images/projects/architecture/SystemArchitectureProject2.png" alt="System Architecture 2 Project" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+            </div>
             <div class="project-info">
               <h3>System Architecture 2 Project</h3>
-                <p>A hands-on exercise to implement modular components and simple integrations — focused on practical problem solving and documenting the process.</p>
-              <a href="#" class="project-link">View</a>
+              <p>A hands-on exercise to implement modular components and simple integrations — focused on practical problem solving and documenting the process.</p>
+              <div class="project-footer">
+                <span class="project-link">Inspect Case Study →</span>
+              </div>
             </div>
           </article>
-          <article class="project-card" data-title="Sample Project Three" data-desc="A hands-on project exploring both frontend and backend concepts with real-world scenarios." data-img="assets/images/projects/multimedia/MusicVideo.png" data-link="#">
-            <img src="assets/images/projects/multimedia/ProjectAnimation&VideoEditing.png" alt="Project 3" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+          <article class="project-card" data-title="Multimedia Video & Animation" data-desc="A multimedia project that combines animation and video editing. Shows skills in timing, sequencing, and presenting short-form media — useful for portfolio storytelling." data-img="assets/images/projects/multimedia/MusicVideo.png" data-link="https://drive.google.com/drive/folders/1vm_ceo1kqJx2N8TPddtCnANfddtgWRMm">
+            <div class="project-image-wrapper">
+              <img src="assets/images/projects/multimedia/ProjectAnimation&VideoEditing.png" alt="Multimedia Project" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+            </div>
             <div class="project-info">
-              <h3>Music Video</h3>
-                <p>A multimedia project that combines animation and video editing. Shows skills in timing, sequencing, and presenting short-form media — useful for portfolio storytelling.</p>
-                <a href="https://drive.google.com/drive/folders/1vm_ceo1kqJx2N8TPddtCnANfddtgWRMm?fbclid=IwY2xjawOsq99leHRuA2FlbQIxMABicmlkETFFRG1hT0NLSUhvOHdSbW0wc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuty3uPGz7M-Y9txFy8AKqd82QD3OI7Cfi1R-6fTKRtFGRgIyeRJj3CFdd22_aem_zU500bJo-mysbWuSjb_fyg" class="project-link">View</a>
+              <h3>Multimedia & Animation</h3>
+              <p>A multimedia project combining animation and editing to convey narrative sequencing and product storytelling.</p>
+              <div class="project-footer">
+                <span class="project-link">View Media Folder ↗</span>
+              </div>
             </div>
           </article>
+        </div>
+      </section>
+
+      <!-- Tech Stack Section -->
+      <section id="skills" class="main-section">
+        <h2 class="main-title">Skills & Technologies</h2>
+        <div class="tech-categories" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+          <div class="tech-category-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;">
+            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <span>🌐</span> Frontend Development
+            </h4>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript (ES6+)</span>
+              <span class="tech-tag">Responsive UI</span>
+            </div>
+          </div>
+          <div class="tech-category-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;">
+            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <span>⚙️</span> Backend & Scripting
+            </h4>
+            <div class="tech-tags">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
+          </div>
+          <div class="tech-category-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;">
+            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+              <span>📱</span> Mobile & Systems
+            </h4>
+            <div class="tech-tags">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">Git / GitHub</span>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- Certifications Section -->
       <section id="certifications" class="main-section">
-        <h2 class="main-title">Certifications</h2>
+        <h2 class="main-title">Certifications & Credentials</h2>
         <div class="certifications-grid">
           <div class="certification-card">
-            <h3>Certification One</h3>
-            <p class="cert-issuer">Issuing Organization</p>
+            <h3>Web Development Fundamentals</h3>
+            <p class="cert-issuer">Academic & Online Training</p>
             <p class="cert-year">2025</p>
           </div>
           <div class="certification-card">
-            <h3>Certification Two</h3>
-            <p class="cert-issuer">Issuing Organization</p>
+            <h3>Programming & Logic Formulation</h3>
+            <p class="cert-issuer">Computer Studies Department</p>
             <p class="cert-year">2025</p>
           </div>
           <div class="certification-card">
-            <h3>Certification Three</h3>
-            <p class="cert-issuer">Issuing Organization</p>
+            <h3>Database Management Essentials</h3>
+            <p class="cert-issuer">Technical Coursework</p>
             <p class="cert-year">2025</p>
           </div>
         </div>
       </section>
 
-      <!-- Beyond Learning Section -->
+      <!-- Beyond Coding Section -->
       <section id="beyond" class="main-section">
         <h2 class="main-title">Beyond Coding</h2>
-        <p>When I'm not studying or coding, I focus on learning about emerging technologies, exploring different perspectives, and staying curious. I believe in balancing technical growth with personal development and community engagement.</p>
-        <p>I'm passionate about sharing knowledge, helping others learn, and being part of a supportive developer community.</p>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 26px;">
+          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 12px;">
+            Outside of programming, I focus on continuous personal development, studying emerging tech innovations, and collaborating with fellow student developers.
+          </p>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted);">
+            I believe that great software engineers combine technical execution with empathy, clear communication, and an eagerness to keep learning every day.
+          </p>
+        </div>
       </section>
     </main>
   </div>
@@ -169,7 +245,7 @@
       <div class="modal-body">
         <h3 id="project-modal-title">Project title</h3>
         <p id="project-modal-desc" class="muted">Project description</p>
-        <p><a id="project-modal-link" href="#" target="_blank" rel="noopener">Open project</a></p>
+        <p style="margin-top: 16px;"><a id="project-modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; width: auto; padding: 8px 18px;">Open Project ↗</a></p>
       </div>
     </div>
   </div>
