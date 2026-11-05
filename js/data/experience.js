@@ -1,33 +1,32 @@
 export const experienceData = [
   {
-    title: "School Projects & Learning",
-    company: "3rd Year College",
-    period: "In Progress",
-    description: "Focused on building foundational skills through coursework, group projects, and self-directed learning. Exploring both frontend and backend development."
+    title: "Senior Academic Capstone & Degree Completion",
+    company: "4th Year BSIT • Graduating in 1 Semester",
+    period: "2025 – 2026",
+    description: "Completing senior capstone engineering and final university degree requirements. Exploring full-stack lifecycles from architecture blueprints and database schema normalization to REST API integrations."
   },
   {
-    title: "Self-Learning Projects",
-    company: "Independent Study",
+    title: "Self-Directed Software Engineering",
+    company: "Independent Production Practice",
     period: "Ongoing",
-    description: "Building small practice projects to solidify concepts and explore new technologies. Focus on learning best practices and improving code quality."
+    description: "Developing practical, scalable applications to master modern frontend and backend technologies. Emphasizing clean folder structures, modular vanilla JavaScript, responsive CSS design systems, and database relationships."
   }
 ];
 
 export const certificationsData = [
   {
-    title: "Certification One",
-    issuer: "Issuing Organization",
+    title: "Web Development Fundamentals",
+    issuer: "Academic & Online Technical Training",
     year: "2025"
   },
   {
-    title: "Certification Two",
-    issuer: "Issuing Organization",
+    title: "Programming & Logic Formulation",
+    issuer: "Computer Studies Department",
     year: "2025"
   },
   {
-    title: "Certification Three",
-    issuer: "Issuing Organization",
+    title: "Database Management Essentials",
+    issuer: "Technical Coursework",
     year: "2025"
   }
 ];
-

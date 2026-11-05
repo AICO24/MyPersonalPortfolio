@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manolo Gochaico Jr. | Full-Stack Web Developer</title>
-  <meta name="description" content="Personal portfolio of Manolo Gochaico Jr. — Aspiring Full-Stack Web Developer specializing in modern web and mobile applications with React Native, TypeScript, and PHP/Python." />
+  <title>Manolo Jr. Gochaico A. | Full-Stack Web Developer</title>
+  <meta name="description" content="Personal portfolio of Manolo Jr. Gochaico A. — Graduating 4th-Year BSIT Student and Full-Stack Web Developer specializing in TypeScript, React Native, PHP REST APIs, and relational databases." />
   
-  <!-- Zero-FOUT Theme Initialization -->
+  <!-- Zero-FOUT Pure Dark Default Initialization -->
   <script>
     (function() {
       const saved = localStorage.getItem('theme');
@@ -22,72 +22,61 @@
 </head>
 <body>
 
-  <!-- Floating Minimalist Navigation Pill -->
-  <header class="site-header">
-    <nav class="nav-pill" aria-label="Main navigation">
-      <a href="#hero" class="nav-brand" aria-label="Manolo Gochaico Jr.">
-        <span class="brand-monogram">MG</span>
-        <span class="brand-dot" aria-hidden="true"></span>
-      </a>
-      <ul class="nav-pill-links">
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#skills" class="nav-link">Stack</a></li>
-        <li><a href="#experience" class="nav-link">Journey</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button id="theme-toggle" class="theme-toggle-pill" aria-label="Toggle theme" title="Toggle theme">
-          <span class="theme-icon" aria-hidden="true">🌙</span>
-        </button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Unified Single-Column Flow -->
+  <!-- Layout Container -->
   <div class="site-wrapper">
 
-    <!-- Hero Section (Top Profile with Gaze Tracking) -->
+    <!-- Flush Minimalist Site Header (No Floating Capsule) -->
+    <header class="site-header">
+      <a href="#hero" class="brand-monogram" aria-label="Manolo Jr. Gochaico A.">MG</a>
+      <nav class="header-nav" aria-label="Site Navigation">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Stack</a>
+        <a href="#experience" class="nav-link">Journey</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle color theme">
+          <!-- SVG icon injected by theme.js -->
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section (Left Portrait + Right Content) -->
     <section id="hero" class="hero-section">
-      <div class="hero-header">
-        <div class="hero-intro">
-          <p class="hero-greeting">Hi, I'm</p>
-          <h1 class="hero-name">Manolo Gochaico Jr.</h1>
-          <p class="hero-title">Aspiring Full-Stack Web Developer</p>
-          <p class="hero-bio">
-            3rd-year BSIT student focused on building performant, reliable web architectures and modern mobile solutions. Passionate about clean modular code, responsive interfaces, and developer-first design systems.
-          </p>
-
-          <div class="hero-meta">
-            <span class="meta-item">📍 Caloocan City, Philippines</span>
-            <span class="meta-separator">•</span>
-            <span class="meta-item">🎓 3rd Year BSIT Student</span>
-          </div>
-
-          <!-- Quick Action Buttons -->
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">Featured Work ↓</a>
-            <button id="copy-email-btn" class="btn btn-secondary" data-email="mjgochaico24@gmail.com" title="Click to copy email address">
-              <span class="copy-icon">📋</span>
-              <span class="copy-text">Copy Email</span>
-            </button>
-            <a href="https://github.com/AICO24" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub ↗</a>
+      <!-- Left Column: Rectangular Portrait with 3D Gaze Tracking -->
+      <div class="hero-left">
+        <div class="avatar-container" id="avatar-container" title="3D Gaze Tracking Avatar">
+          <div class="avatar-wrapper" id="avatar-wrapper">
+            <img src="assets/images/profile/profile1.1.jpg" alt="Manolo Jr. Gochaico A." class="avatar-image" id="profile-image" width="240" height="300" loading="eager">
+            <div class="avatar-glare" id="avatar-glare"></div>
           </div>
         </div>
+      </div>
 
-        <!-- 3D Gaze-Tracking Avatar with Live Status -->
-        <div class="hero-avatar-area">
-          <div class="avatar-carousel" id="avatar-container" title="Click to cycle photo">
-            <div class="avatar-wrapper" id="avatar-wrapper">
-              <img src="assets/images/profile/profile1.1.jpg" alt="Manolo Gochaico Jr." class="avatar" id="profile-image" width="130" height="130" loading="eager">
-              <div class="avatar-glare" id="avatar-glare"></div>
-            </div>
-          </div>
-          
-          <div class="status-badge" aria-label="Current status: Available for junior roles and freelance">
-            <span class="status-dot"></span>
-            <span class="status-text">Available for Roles</span>
-          </div>
+      <!-- Right Column: Name, Inline Pills Bio, Status & Links -->
+      <div class="hero-right">
+        <h1 class="hero-name">Manolo Jr. Gochaico A.</h1>
+        
+        <p class="hero-bio-lead">
+          I'm a <span class="inline-pill"><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> full-stack</span> developer. I build modern <span class="inline-pill"><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> web</span> &amp; <span class="inline-pill"><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg> mobile apps</span>, and these days I'm focused on <span class="inline-pill"><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg> scalable backends</span> &amp; AI integrations.
+        </p>
+
+        <p class="hero-bio-sub">
+          Currently a <strong>graduating 4th-year BSIT student</strong> — just 1 semester away from finishing my degree. I love turning architectural diagrams and complex ideas into clean, reliable software that people actually use.
+        </p>
+
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          <span class="status-text">Available for Junior Roles &amp; Freelance Projects</span>
+        </div>
+
+        <div class="hero-links">
+          <a href="https://github.com/AICO24" target="_blank" rel="noopener noreferrer" class="hero-link">github ↗</a>
+          <a href="mailto:mjgochaico24@gmail.com" class="hero-link">email ↗</a>
+          <button id="copy-email-btn" class="hero-link" data-email="mjgochaico24@gmail.com" title="Copy email address">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span class="copy-text">copy email</span>
+          </button>
+          <a href="#projects" class="hero-link">projects ↓</a>
         </div>
       </div>
     </section>
@@ -95,23 +84,33 @@
     <!-- Main Content Stream -->
     <main class="main-content-flow">
 
-      <!-- 01 // PROJECTS SECTION -->
+      <!-- 01 // PROJECTS (Swipeable Carousel) -->
       <section id="projects" class="main-section">
-        <div class="section-label">
-          <span class="section-num">01</span>
-          <span class="section-slash">//</span>
-          <span class="section-tag">PROJECTS</span>
+        <div class="projects-header-row">
+          <div>
+            <div class="section-label">01 // PROJECTS</div>
+            <h2 class="main-title" style="margin-bottom: 0;">Featured Work</h2>
+          </div>
+          <div class="carousel-controls" aria-label="Project carousel controls">
+            <button id="project-prev-btn" class="carousel-btn" aria-label="Previous project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button id="project-next-btn" class="carousel-btn" aria-label="Next project">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
         </div>
-        <h2 class="main-title">Featured Work</h2>
-        
-        <div class="projects-grid">
+
+        <!-- Swipeable Project Carousel Track -->
+        <div class="projects-carousel-track" id="projects-track" tabindex="0" aria-label="Swipeable projects list">
+          
           <!-- Flagship Project 1: TindaMate -->
           <article class="project-card" data-title="TindaMate — Sari-Sari Store POS & Ledger" data-desc="TindaMate is a cross-platform mobile POS and store management application designed for micro-retail and sari-sari store owners. Built with React Native and Expo Router, it features an offline-friendly multi-item cart, dynamic inventory with Supabase image storage, an automated customer credit ('utang') ledger with debt settlement workflows, and aggregated COGS daily profit analytics backed by PostgreSQL with Row-Level Security (RLS)." data-img="assets/images/projects/tindamate/TindaMate_LOGO.png" data-link="https://github.com/AICO24/TindaMate">
             <div class="project-image-wrapper">
-              <img src="assets/images/projects/tindamate/TindaMate_LOGO.png" alt="TindaMate Mobile POS App" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+              <img src="assets/images/projects/tindamate/TindaMate_LOGO.png" alt="TindaMate Mobile POS App" class="project-image" width="350" height="180" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
-              <h3>TindaMate — Mobile POS & Ledger</h3>
+              <h3>TindaMate — Mobile POS &amp; Ledger</h3>
               <p>Specialized retail POS and inventory app with multi-item cart, customer credit (&quot;utang&quot;) ledger, and automated COGS profit analytics.</p>
               <div class="project-tags">
                 <span class="project-tag">React Native</span>
@@ -129,7 +128,7 @@
           <!-- Flagship Project 2: Cemetery Management System -->
           <article class="project-card" data-title="Cemetery Management System with AI Forecast" data-desc="A complete full-stack web application designed for municipal cemetery administration. It features role-based dashboards (Admin, Staff, Citizen), comprehensive decedent and plot records tracking, and automated burial scheduling. It integrates a dedicated Python Flask microservice that performs capacity saturation forecasting and plot allocation recommendations, designed with graceful degradation to maintain core availability when AI services are offline." data-img="assets/images/projects/cemetery-ms/CapstoneProject.jpg" data-link="https://github.com/AICO24/CMS">
             <div class="project-image-wrapper">
-              <img src="assets/images/projects/cemetery-ms/CapstoneProject.jpg" alt="Cemetery Management System Dashboard" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+              <img src="assets/images/projects/cemetery-ms/CapstoneProject.jpg" alt="Cemetery Management System Dashboard" class="project-image" width="350" height="180" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3>Cemetery Management System</h3>
@@ -150,7 +149,7 @@
           <!-- Engineering Project 3: System Architecture Studies -->
           <article class="project-card" data-title="System Architecture &amp; Data Flow Studies" data-desc="A collection of academic and practical system design blueprints documenting service decoupling, database entity relationships, and transaction lifecycles. Created to study enterprise design patterns, modular boundaries, and performance trade-offs prior to production code implementation." data-img="assets/images/projects/architecture/SystemArchitectureProject2.png" data-link="https://github.com/AICO24">
             <div class="project-image-wrapper">
-              <img src="assets/images/projects/architecture/SystemArchitectureProject2.png" alt="System Architecture 2 Project" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+              <img src="assets/images/projects/architecture/SystemArchitectureProject2.png" alt="System Architecture 2 Project" class="project-image" width="350" height="180" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
               <h3>System Architecture Studies</h3>
@@ -166,21 +165,21 @@
               </div>
             </div>
           </article>
+
         </div>
       </section>
 
-      <!-- 02 // TECH STACK SECTION -->
+      <!-- 02 // TECH STACK -->
       <section id="skills" class="main-section">
-        <div class="section-label">
-          <span class="section-num">02</span>
-          <span class="section-slash">//</span>
-          <span class="section-tag">TECH STACK</span>
-        </div>
-        <h2 class="main-title">Skills & Technologies</h2>
+        <div class="section-label">02 // TECH STACK</div>
+        <h2 class="main-title">Skills &amp; Technologies</h2>
 
         <div class="tech-categories">
           <div class="tech-category-card">
-            <h4><span>🌐</span> Frontend Development</h4>
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Frontend Development
+            </h4>
             <div class="tech-tags">
               <span class="tech-tag">HTML5</span>
               <span class="tech-tag">CSS3</span>
@@ -190,7 +189,10 @@
             </div>
           </div>
           <div class="tech-category-card">
-            <h4><span>⚙️</span> Backend & Database</h4>
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              Backend &amp; Database
+            </h4>
             <div class="tech-tags">
               <span class="tech-tag">PHP (MVC)</span>
               <span class="tech-tag">MySQL</span>
@@ -200,64 +202,59 @@
             </div>
           </div>
           <div class="tech-category-card">
-            <h4><span>📱</span> Mobile & Tools</h4>
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg>
+              Mobile &amp; Systems
+            </h4>
             <div class="tech-tags">
               <span class="tech-tag">React Native</span>
               <span class="tech-tag">Expo Router</span>
               <span class="tech-tag">Supabase</span>
               <span class="tech-tag">Git / GitHub</span>
-              <span class="tech-tag">System Architecture</span>
+              <span class="tech-tag">System Design</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 03 // EXPERIENCE & JOURNEY SECTION -->
+      <!-- 03 // EXPERIENCE & JOURNEY -->
       <section id="experience" class="main-section">
-        <div class="section-label">
-          <span class="section-num">03</span>
-          <span class="section-slash">//</span>
-          <span class="section-tag">JOURNEY</span>
-        </div>
-        <h2 class="main-title">Experience & Milestones</h2>
+        <div class="section-label">03 // JOURNEY</div>
+        <h2 class="main-title">Experience &amp; Milestones</h2>
 
         <div class="experience-list">
           <div class="experience-item">
             <div class="experience-header">
-              <h3>School Projects & Academic Development</h3>
-              <span class="year">In Progress</span>
+              <h3>Senior Academic Capstone &amp; Degree Completion</h3>
+              <span class="year">4th Year (Graduating)</span>
             </div>
-            <p class="company">3rd Year BSIT — Caloocan City</p>
-            <p class="description">Building foundational and intermediate engineering skills through university coursework, team collaborations, and real-world system requirements. Exploring full-stack lifecycles from architecture blueprints to relational database schema design.</p>
+            <p class="company">BS Information Technology — Caloocan City</p>
+            <p class="description">Completing final senior capstone engineering and university degree requirements (1 semester remaining). Exploring full-stack lifecycles from architecture blueprints and database schema normalization to REST API integrations.</p>
           </div>
           <div class="experience-item">
             <div class="experience-header">
               <h3>Self-Directed Software Engineering</h3>
-              <span class="year">Ongoing</span>
+              <span class="year">Ongoing Practice</span>
             </div>
-            <p class="company">Independent Practice</p>
+            <p class="company">Independent Production Work</p>
             <p class="description">Developing practical, scalable applications to master modern frontend and backend technologies. Emphasizing clean folder structures, modular vanilla JavaScript, responsive CSS design systems, and database relationships.</p>
           </div>
         </div>
       </section>
 
-      <!-- 04 // CERTIFICATIONS SECTION -->
+      <!-- 04 // CERTIFICATIONS -->
       <section id="certifications" class="main-section">
-        <div class="section-label">
-          <span class="section-num">04</span>
-          <span class="section-slash">//</span>
-          <span class="section-tag">CREDENTIALS</span>
-        </div>
-        <h2 class="main-title">Certifications & Training</h2>
+        <div class="section-label">04 // CREDENTIALS</div>
+        <h2 class="main-title">Certifications &amp; Training</h2>
 
         <div class="certifications-grid">
           <div class="certification-card">
             <h3>Web Development Fundamentals</h3>
-            <p class="cert-issuer">Academic & Online Training</p>
+            <p class="cert-issuer">Academic &amp; Online Technical Training</p>
             <p class="cert-year">2025</p>
           </div>
           <div class="certification-card">
-            <h3>Programming & Logic Formulation</h3>
+            <h3>Programming &amp; Logic Formulation</h3>
             <p class="cert-issuer">Computer Studies Department</p>
             <p class="cert-year">2025</p>
           </div>
@@ -269,42 +266,34 @@
         </div>
       </section>
 
-      <!-- 05 // ABOUT ME SECTION -->
+      <!-- 05 // ABOUT ME -->
       <section id="about" class="main-section">
-        <div class="section-label">
-          <span class="section-num">05</span>
-          <span class="section-slash">//</span>
-          <span class="section-tag">ABOUT</span>
-        </div>
-        <h2 class="main-title">Background & Philosophy</h2>
+        <div class="section-label">05 // ABOUT</div>
+        <h2 class="main-title">Background &amp; Philosophy</h2>
 
-        <div class="about-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 28px;">
-          <p style="font-size: 1.02rem; line-height: 1.75; color: var(--text); margin-bottom: 16px;">
-            I am a 3rd-year college student and aspiring <strong>Full-Stack Web Developer</strong> with a strong commitment to building performant, modern, and user-focused digital experiences. I enjoy turning complex business problems into intuitive web and mobile solutions.
+        <div class="experience-item" style="line-height: 1.75;">
+          <p style="margin-bottom: 14px; color: var(--text);">
+            I am a graduating <strong>4th-year BS Information Technology student</strong> and aspiring <strong>Full-Stack Web Developer</strong> with just one semester remaining before graduation. My goal is to build performant, reliable, and user-centric digital products that solve real-world problems.
           </p>
-          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 16px;">
-            My technical focus centers on modern frontend architectures, clean state management, RESTful APIs, and relational databases. I believe in writing readable, maintainable code and continuously exploring new frameworks and architectural patterns.
+          <p style="margin-bottom: 14px; color: var(--text-muted); font-size: 0.88rem;">
+            My technical focus centers on modern frontend architectures, clean state management, RESTful APIs, and relational database systems (MySQL &amp; PostgreSQL). I believe in writing readable, maintainable code and continuously exploring new frameworks and architectural patterns.
           </p>
-          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted);">
-            Outside of programming, I focus on continuous personal development, studying emerging tech innovations, and collaborating with fellow student developers. I believe that great software engineers combine technical execution with clear communication and an eagerness to keep learning every day.
+          <p style="color: var(--text-muted); font-size: 0.88rem;">
+            Outside of programming, I focus on continuous personal development, studying emerging software patterns, and collaborating with fellow developers. Great software combines disciplined execution with clear communication.
           </p>
         </div>
       </section>
 
-      <!-- 06 // CONNECT & CONTACT SECTION -->
+      <!-- 06 // CONNECT & CONTACT -->
       <section id="contact" class="main-section">
-        <div class="section-label">
-          <span class="section-num">06</span>
-          <span class="section-slash">//</span>
-          <span class="section-tag">CONNECT</span>
-        </div>
+        <div class="section-label">06 // CONNECT</div>
         <h2 class="main-title">Let's Build Something Together</h2>
 
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 28px;">
-          <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text); margin-bottom: 20px;">
-            I'm currently seeking junior developer positions, internships, and freelance projects where I can contribute and continue to grow. Whether you have a project in mind or just want to connect, feel free to reach out.
+        <div class="experience-item">
+          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text); margin-bottom: 18px;">
+            I'm currently seeking junior developer positions, internships, and freelance projects where I can contribute and continue to grow. Whether you have an opportunity or just want to chat tech, feel free to reach out.
           </p>
-          <div class="hero-actions" style="margin-top: 12px;">
+          <div class="hero-links" style="padding-top: 0;">
             <a href="mailto:mjgochaico24@gmail.com" class="btn btn-primary">Send Email ↗</a>
             <a href="https://github.com/AICO24" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub Profile ↗</a>
           </div>
@@ -315,13 +304,13 @@
 
     <!-- Minimalist Site Footer -->
     <footer class="site-footer">
-      <div class="footer-copy">
-        <span>© 2026 Manolo Gochaico Jr.</span>
-        <span>•</span>
+      <div>
+        <span>© 2026 Manolo Jr. Gochaico A.</span>
+        <span> • </span>
         <span>All rights reserved.</span>
       </div>
-      <div class="footer-tag">
-        Crafted with Vanilla JS &amp; Modern CSS
+      <div>
+        Vanilla JS &amp; Modern CSS
       </div>
     </footer>
 
@@ -335,7 +324,7 @@
       <div class="modal-body">
         <div id="modal-tags" class="project-tags" style="margin-bottom: 12px;"></div>
         <h3 id="project-modal-title">Project title</h3>
-        <p id="project-modal-desc" class="muted">Project description</p>
+        <p id="project-modal-desc">Project description</p>
         <p style="margin-top: 16px;"><a id="project-modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; width: auto; padding: 8px 18px;">Open Project ↗</a></p>
       </div>
     </div>
