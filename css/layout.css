@@ -88,8 +88,6 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  perspective: 1000px;
-  cursor: pointer;
 }
 
 .avatar-wrapper {
@@ -99,13 +97,11 @@
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--border);
-  background: var(--bg-card);
-  transform-style: preserve-3d;
-  will-change: transform;
+  background: #000000;
   transition: border-color 0.25s ease;
 }
 
-.avatar-container:hover .avatar-wrapper {
+.avatar-wrapper:hover {
   border-color: #383838;
 }
 
@@ -114,21 +110,6 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  pointer-events: none;
-  transform: scale(1.05);
-  will-change: transform;
-  filter: contrast(1.05);
-}
-
-.avatar-glare {
-  position: absolute;
-  inset: 0;
-  border-radius: 14px;
-  pointer-events: none;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 65%);
-  opacity: 0;
-  mix-blend-mode: overlay;
-  transition: opacity 0.2s ease;
 }
 
 /* Hero Right Column */
