@@ -122,39 +122,64 @@
       <section id="projects" class="main-section">
         <h2 class="main-title">Featured Projects</h2>
         <div class="projects-grid">
-          <article class="project-card" data-title="System Architecture 1 Project" data-desc="Class project documenting system components and data flow. Includes diagrams and notes used to understand architecture decisions and trade-offs." data-img="assets/images/projects/architecture/SystemArchitectureProject1.png" data-link="#">
+          <!-- Flagship Project 1: TindaMate -->
+          <article class="project-card" data-title="TindaMate — Sari-Sari Store POS & Ledger" data-desc="TindaMate is a cross-platform mobile POS and store management application designed for micro-retail and sari-sari store owners. Built with React Native and Expo Router, it features an offline-friendly multi-item cart, dynamic inventory with Supabase image storage, an automated customer credit ('utang') ledger with debt settlement workflows, and aggregated COGS daily profit analytics backed by PostgreSQL with Row-Level Security (RLS)." data-img="assets/images/projects/tindamate/tindamate-showcase.jpg" data-link="https://github.com/AICO24/TindaMate">
+            <div class="project-image-wrapper">
+              <img src="assets/images/projects/tindamate/tindamate-showcase.jpg" alt="TindaMate Mobile POS App" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <h3>TindaMate — Mobile POS & Ledger</h3>
+              <p>Specialized retail POS and inventory app with multi-item cart, customer credit (&quot;utang&quot;) ledger, and automated COGS profit analytics.</p>
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Expo SDK 58</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">Supabase</span>
+                <span class="project-tag">PostgreSQL</span>
+              </div>
+              <div class="project-footer">
+                <span class="project-link">View Case Study &amp; Code →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Flagship Project 2: Cemetery Management System -->
+          <article class="project-card" data-title="Cemetery Management System with AI Forecast" data-desc="A complete full-stack web application designed for municipal cemetery administration. It features role-based dashboards (Admin, Staff, Citizen), comprehensive decedent and plot records tracking, and automated burial scheduling. It integrates a dedicated Python Flask microservice that performs capacity saturation forecasting and plot allocation recommendations, designed with graceful degradation to maintain core availability when AI services are offline." data-img="assets/images/projects/cemetery-ms/cemetery-ms-preview.png" data-link="https://github.com/AICO24/CMS">
+            <div class="project-image-wrapper">
+              <img src="assets/images/projects/cemetery-ms/cemetery-ms-preview.png" alt="Cemetery Management System Dashboard" class="project-image" width="340" height="180" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <h3>Cemetery Management System</h3>
+              <p>Enterprise record, plot management, and booking platform powered by PHP MVC REST API, MySQL database, and Python Flask AI forecasting.</p>
+              <div class="project-tags">
+                <span class="project-tag">PHP REST API</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">Python (Flask)</span>
+                <span class="project-tag">AI Saturation</span>
+              </div>
+              <div class="project-footer">
+                <span class="project-link">View Case Study &amp; Code →</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Engineering Project 3: System Architecture Studies -->
+          <article class="project-card" data-title="System Architecture &amp; Data Flow Studies" data-desc="A collection of academic and practical system design blueprints documenting service decoupling, database entity relationships, and transaction lifecycles. Created to study enterprise design patterns, modular boundaries, and performance trade-offs prior to production code implementation." data-img="assets/images/projects/architecture/SystemArchitectureProject1.png" data-link="https://github.com/AICO24">
             <div class="project-image-wrapper">
               <img src="assets/images/projects/architecture/SystemArchitectureProject1.png" alt="System Architecture 1 Project" class="project-image" width="340" height="180" loading="lazy" decoding="async">
             </div>
             <div class="project-info">
-              <h3>System Architecture 1 Project</h3>
-              <p>Class project documenting system components and data flow. Includes diagrams and notes used to understand architecture decisions and trade-offs.</p>
-              <div class="project-footer">
-                <span class="project-link">Inspect Case Study →</span>
+              <h3>System Architecture Studies</h3>
+              <p>Engineering analysis and architectural diagrams documenting component decoupling, API boundaries, and database trade-offs.</p>
+              <div class="project-tags">
+                <span class="project-tag">System Design</span>
+                <span class="project-tag">UML</span>
+                <span class="project-tag">Data Flow</span>
+                <span class="project-tag">Architecture</span>
               </div>
-            </div>
-          </article>
-          <article class="project-card" data-title="System Architecture 2 Project" data-desc="A hands-on exercise to implement modular components and simple integrations — focused on practical problem solving and documenting the process." data-img="assets/images/projects/architecture/SystemProject2.png" data-link="#">
-            <div class="project-image-wrapper">
-              <img src="assets/images/projects/architecture/SystemArchitectureProject2.png" alt="System Architecture 2 Project" class="project-image" width="340" height="180" loading="lazy" decoding="async">
-            </div>
-            <div class="project-info">
-              <h3>System Architecture 2 Project</h3>
-              <p>A hands-on exercise to implement modular components and simple integrations — focused on practical problem solving and documenting the process.</p>
               <div class="project-footer">
-                <span class="project-link">Inspect Case Study →</span>
-              </div>
-            </div>
-          </article>
-          <article class="project-card" data-title="Multimedia Video & Animation" data-desc="A multimedia project that combines animation and video editing. Shows skills in timing, sequencing, and presenting short-form media — useful for portfolio storytelling." data-img="assets/images/projects/multimedia/MusicVideo.png" data-link="https://drive.google.com/drive/folders/1vm_ceo1kqJx2N8TPddtCnANfddtgWRMm">
-            <div class="project-image-wrapper">
-              <img src="assets/images/projects/multimedia/ProjectAnimation&VideoEditing.png" alt="Multimedia Project" class="project-image" width="340" height="180" loading="lazy" decoding="async">
-            </div>
-            <div class="project-info">
-              <h3>Multimedia & Animation</h3>
-              <p>A multimedia project combining animation and editing to convey narrative sequencing and product storytelling.</p>
-              <div class="project-footer">
-                <span class="project-link">View Media Folder ↗</span>
+                <span class="project-link">Inspect Diagrams →</span>
               </div>
             </div>
           </article>
@@ -243,6 +268,7 @@
       <button id="modal-close" class="modal-close" aria-label="Close dialog">✕</button>
       <img id="modal-image" src="assets/images/projects/architecture/SystemArchitectureProject1.png" alt="Project image" class="modal-image" width="390" height="280" loading="lazy" decoding="async">
       <div class="modal-body">
+        <div id="modal-tags" class="project-tags" style="margin-bottom: 12px;"></div>
         <h3 id="project-modal-title">Project title</h3>
         <p id="project-modal-desc" class="muted">Project description</p>
         <p style="margin-top: 16px;"><a id="project-modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; width: auto; padding: 8px 18px;">Open Project ↗</a></p>

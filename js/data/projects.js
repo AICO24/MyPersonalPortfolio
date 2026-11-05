@@ -1,33 +1,38 @@
 export const projectsData = [
   {
-    id: "system-architecture-1",
-    title: "System Architecture 1 Project",
-    dataTitle: "Sample Project One",
-    description: "Class project documenting system components and data flow. Includes diagrams and notes used to understand architecture decisions and trade-offs.",
-    dataDesc: "A school project or practice work built to learn and explore. Showcases basic to intermediate skills.",
+    id: "tindamate",
+    title: "TindaMate — Sari-Sari Store POS & Ledger",
+    category: "Mobile & Cloud Architecture",
+    tags: ["React Native", "Expo", "TypeScript", "Supabase", "PostgreSQL"],
+    shortDesc: "A specialized retail Point of Sale (POS) and inventory mobile app featuring multi-item cart management, customer credit (\"utang\") ledger tracking, and automated COGS profit analytics.",
+    fullDesc: "TindaMate is a cross-platform mobile POS and store management application designed for micro-retail and sari-sari store owners. Built with React Native and Expo Router, it features an offline-friendly multi-item cart, dynamic inventory with Supabase image storage, an automated customer credit ledger with debt settlement workflows, and aggregated COGS (Cost of Goods Sold) daily profit analytics backed by PostgreSQL with Row-Level Security (RLS).",
+    image: "assets/images/projects/tindamate/tindamate-showcase.jpg",
+    modalImage: "assets/images/projects/tindamate/tindamate-showcase.jpg",
+    github: "https://github.com/AICO24/TindaMate",
+    link: "https://github.com/AICO24/TindaMate"
+  },
+  {
+    id: "cemetery-ms",
+    title: "Cemetery Management System with AI Forecast",
+    category: "Full-Stack Web & AI Microservice",
+    tags: ["PHP", "MySQL", "JavaScript", "Python", "Flask", "REST API"],
+    shortDesc: "An enterprise record, plot management, and booking platform powered by a PHP MVC REST backend, relational MySQL database with migration tracking, and a Python Flask AI microservice for lot capacity forecasting.",
+    fullDesc: "A complete full-stack web application designed for municipal cemetery administration. It features role-based dashboards (Admin, Staff, Citizen), comprehensive decedent and plot records tracking, and automated burial scheduling. It integrates a dedicated Python Flask microservice that performs capacity saturation forecasting and plot allocation recommendations, designed with graceful degradation to maintain core availability when AI services are offline.",
+    image: "assets/images/projects/cemetery-ms/cemetery-ms-preview.png",
+    modalImage: "assets/images/projects/cemetery-ms/cemetery-ms-preview.png",
+    github: "https://github.com/AICO24/CMS",
+    link: "https://github.com/AICO24/CMS"
+  },
+  {
+    id: "system-architecture",
+    title: "System Architecture & Data Flow Studies",
+    category: "Engineering Analysis",
+    tags: ["System Design", "UML", "Data Flow", "Architecture"],
+    shortDesc: "Comprehensive technical analysis and architectural diagrams documenting distributed component interactions, API boundaries, and database trade-offs for scalable application design.",
+    fullDesc: "A collection of academic and practical system design blueprints documenting service decoupling, database entity relationships, and transaction lifecycles. Created to study enterprise design patterns, modular boundaries, and performance trade-offs prior to production code implementation.",
     image: "assets/images/projects/architecture/SystemArchitectureProject1.png",
     modalImage: "assets/images/projects/architecture/SystemArchitectureProject1.png",
-    link: "#"
-  },
-  {
-    id: "system-architecture-2",
-    title: "System Architecture 2 Project",
-    dataTitle: "Sample Project Two",
-    description: "A hands-on exercise to implement modular components and simple integrations — focused on practical problem solving and documenting the process.",
-    dataDesc: "A learning-focused project demonstrating skills in problem-solving and practical implementation.",
-    image: "assets/images/projects/architecture/SystemArchitectureProject2.png",
-    modalImage: "assets/images/projects/architecture/SystemProject2.png",
-    link: "#"
-  },
-  {
-    id: "music-video",
-    title: "Music Video",
-    dataTitle: "Sample Project Three",
-    description: "A multimedia project that combines animation and video editing. Shows skills in timing, sequencing, and presenting short-form media — useful for portfolio storytelling.",
-    dataDesc: "A hands-on project exploring both frontend and backend concepts with real-world scenarios.",
-    image: "assets/images/projects/multimedia/ProjectAnimation&VideoEditing.png",
-    modalImage: "assets/images/projects/multimedia/MusicVideo.png",
-    link: "https://drive.google.com/drive/folders/1vm_ceo1kqJx2N8TPddtCnANfddtgWRMm?fbclid=IwY2xjawOsq99leHRuA2FlbQIxMABicmlkETFFRG1hT0NLSUhvOHdSbW0wc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuty3uPGz7M-Y9txFy8AKqd82QD3OI7Cfi1R-6fTKRtFGRgIyeRJj3CFdd22_aem_zU500bJo-mysbWuSjb_fyg"
+    github: "https://github.com/AICO24",
+    link: "https://github.com/AICO24"
   }
 ];
-

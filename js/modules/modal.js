@@ -14,9 +14,22 @@ export function initModal() {
     const cardHeading = card.querySelector('h3')?.textContent;
     const cardParagraph = card.querySelector('p')?.textContent;
     const title = cardHeading || card.dataset.title || 'Project Details';
-    const desc = cardParagraph || card.dataset.desc || '';
+    const desc = card.dataset.desc || cardParagraph || '';
     const img = card.dataset.img || card.querySelector('img')?.src || '';
     const link = card.dataset.link || card.querySelector('a')?.href || '#';
+
+    // Populate modal tags
+    const modalTags = document.getElementById('modal-tags');
+    if (modalTags) {
+      modalTags.innerHTML = '';
+      const cardTags = card.querySelectorAll('.project-tag');
+      cardTags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'project-tag';
+        span.textContent = tag.textContent;
+        modalTags.appendChild(span);
+      });
+    }
 
     if (modalImage) {
       modalImage.src = img;
