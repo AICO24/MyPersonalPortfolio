@@ -99,3 +99,4 @@ export function initAvatarTracker() {
   // Initialize render loop
   requestAnimationFrame(renderLoop);
 }
+
