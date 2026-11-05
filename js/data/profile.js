@@ -13,3 +13,4 @@ export const profileData = {
     { name: "Email", url: "mailto:mjgochaico24@gmail.com" }
   ]
 };
+

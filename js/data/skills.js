@@ -12,3 +12,4 @@ export const skillsData = [
     skills: ["Flutter", "C#"]
   }
 ];
+

@@ -30,3 +30,4 @@ export const certificationsData = [
     year: "2025"
   }
 ];
+
