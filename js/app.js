@@ -3,6 +3,7 @@ import { initCarousel } from './modules/carousel.js';
 import { initModal } from './modules/modal.js';
 import { initNavigation } from './modules/navigation.js';
 import { initAvatarTracker } from './modules/avatarTracker.js';
+import { initCopyEmail } from './modules/copyEmail.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -10,4 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initAvatarTracker();
   initModal();
   initNavigation();
+  initCopyEmail();
 });

@@ -1,40 +1,41 @@
-/* ===== Profile Section ===== */
-.profile-section {
-  margin-bottom: 24px;
-  text-align: center;
+/* ===== Hero Avatar & Profile Elements ===== */
+.hero-avatar-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .avatar-carousel {
   position: relative;
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 20px;
-  cursor: pointer;
+  width: 124px;
+  height: 124px;
   perspective: 900px;
+  cursor: pointer;
 }
 
 .avatar-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 14px;
+  border-radius: 50%;
   overflow: hidden;
   transform-style: preserve-3d;
   will-change: transform;
   border: 3px solid var(--accent);
-  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 28px -5px rgba(56, 189, 248, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.15);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .avatar-carousel:hover .avatar-wrapper {
   border-color: var(--accent-hover);
-  box-shadow: 0 14px 28px -4px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 14px 34px -4px rgba(56, 189, 248, 0.4);
 }
 
 .avatar {
   width: 100%;
   height: 100%;
-  border-radius: 11px;
+  border-radius: 50%;
   object-fit: cover;
   display: block;
   pointer-events: none;
@@ -46,7 +47,7 @@
 .avatar-glare {
   position: absolute;
   inset: 0;
-  border-radius: 11px;
+  border-radius: 50%;
   pointer-events: none;
   background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 65%);
   opacity: 0;
@@ -54,44 +55,47 @@
   transition: opacity 0.2s ease;
 }
 
-.name {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 6px;
-  color: var(--text);
-  line-height: 1.2;
-}
-
-.title {
-  font-size: 0.95rem;
-  color: var(--accent);
-  margin-bottom: 10px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-
-.location {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 16px;
+/* ===== Live Availability Status Badge ===== */
+.status-badge {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--status-bg);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--status-text);
+  margin-top: 14px;
+  transition: all 0.2s ease;
 }
 
-/* ===== Action CTA Buttons ===== */
-.cta-buttons {
-  display: flex;
-  gap: 10px;
-  margin: 18px 0;
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--status-dot);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--status-dot);
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+/* ===== Buttons & CTAs ===== */
 .btn {
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 0.85rem;
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 0.86rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -100,23 +104,23 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  flex: 1;
+  line-height: 1;
 }
 
 .btn-primary {
   background: var(--accent-gradient);
   color: #ffffff;
   border: none;
-  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(56, 189, 248, 0.35);
 }
 
 .btn-secondary {
-  background: var(--bg);
+  background: var(--bg-card);
   color: var(--text);
   border: 1px solid var(--border);
 }
@@ -124,61 +128,71 @@
 .btn-secondary:hover {
   background: var(--bg-card-hover);
   border-color: var(--accent);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-/* ===== Sidebar Content Sections ===== */
-.sidebar-section {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border);
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border-subtle);
 }
 
-.sidebar-section:last-of-type {
-  border-bottom: none;
-}
-
-.section-title {
-  font-size: 0.82rem;
-  font-weight: 700;
-  margin-bottom: 12px;
+.btn-ghost:hover {
   color: var(--text);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  background: var(--bg-card-hover);
+  border-color: var(--border);
+  transform: translateY(-2px);
 }
 
-.sidebar-section p {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.65;
+/* Copy Email Feedback */
+.btn.copied {
+  border-color: var(--status-dot) !important;
+  color: var(--status-text) !important;
 }
 
-/* ===== Tech Stack Section ===== */
+/* ===== Tech Stack Category Grid ===== */
 .tech-categories {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
 }
 
-.tech-category h4 {
-  font-size: 0.8rem;
+.tech-category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  transition: all 0.25s ease;
+}
+
+.tech-category-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.15);
+}
+
+.tech-category-card h4 {
+  font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text-muted);
-  margin-bottom: 6px;
+  color: var(--text);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .tech-tag {
   display: inline-block;
-  padding: 4px 10px;
+  padding: 5px 11px;
   background: var(--tag-bg);
   border: 1px solid var(--tag-border);
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 0.78rem;
   font-family: var(--font-mono);
   color: var(--tag-text);
@@ -190,20 +204,4 @@
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-1px);
-}
-
-/* ===== Responsive Adjustments ===== */
-@media (max-width: 768px) {
-  .profile-section {
-    margin-bottom: 20px;
-  }
-
-  .avatar-carousel {
-    width: 110px;
-    height: 110px;
-  }
-
-  .name {
-    font-size: 1.4rem;
-  }
 }

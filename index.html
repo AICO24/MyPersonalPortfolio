@@ -11,7 +11,7 @@
     (function() {
       const saved = localStorage.getItem('theme');
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (saved === 'dark' || (!saved && prefersDark)) {
+      if (saved === 'dark' || (!saved && prefersDark) || !saved) {
         document.documentElement.classList.add('dark');
         document.addEventListener('DOMContentLoaded', () => document.body.classList.add('dark'));
       }
@@ -21,106 +21,89 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-content">
-        <!-- Profile Section -->
-        <div class="profile-section">
-          <div class="avatar-carousel" id="avatar-container" title="Click to cycle photo">
-            <div class="avatar-wrapper" id="avatar-wrapper">
-              <img src="assets/images/profile/profile1.1.jpg" alt="Manolo Gochaico Jr." class="avatar" id="profile-image" width="140" height="140" loading="eager">
-              <div class="avatar-glare" id="avatar-glare"></div>
-            </div>
-          </div>
-          <h1 class="name">Manolo Gochaico Jr.</h1>
-          <p class="title">Aspiring Full-Stack Web Developer</p>
-          <p class="location">📍 Caloocan City, Philippines</p>
-          
-          <!-- Live Availability Status Badge -->
-          <div class="status-badge" aria-label="Current status: Available for junior roles and freelance">
-            <span class="status-dot"></span>
-            <span class="status-text">Available for Junior Roles & Freelance</span>
+
+  <!-- Floating Minimalist Navigation Pill -->
+  <header class="site-header">
+    <nav class="nav-pill" aria-label="Main navigation">
+      <a href="#hero" class="nav-brand" aria-label="Manolo Gochaico Jr.">
+        <span class="brand-monogram">MG</span>
+        <span class="brand-dot" aria-hidden="true"></span>
+      </a>
+      <ul class="nav-pill-links">
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Stack</a></li>
+        <li><a href="#experience" class="nav-link">Journey</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-pill" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Unified Single-Column Flow -->
+  <div class="site-wrapper">
+
+    <!-- Hero Section (Top Profile with Gaze Tracking) -->
+    <section id="hero" class="hero-section">
+      <div class="hero-header">
+        <div class="hero-intro">
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-name">Manolo Gochaico Jr.</h1>
+          <p class="hero-title">Aspiring Full-Stack Web Developer</p>
+          <p class="hero-bio">
+            3rd-year BSIT student focused on building performant, reliable web architectures and modern mobile solutions. Passionate about clean modular code, responsive interfaces, and developer-first design systems.
+          </p>
+
+          <div class="hero-meta">
+            <span class="meta-item">📍 Caloocan City, Philippines</span>
+            <span class="meta-separator">•</span>
+            <span class="meta-item">🎓 3rd Year BSIT Student</span>
           </div>
 
           <!-- Quick Action Buttons -->
-          <div class="cta-buttons">
-            <a href="mailto:mjgochaico24@gmail.com" class="btn btn-primary">Get In Touch</a>
-            <a href="#projects" class="btn btn-secondary">View Work</a>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Featured Work ↓</a>
+            <button id="copy-email-btn" class="btn btn-secondary" data-email="mjgochaico24@gmail.com" title="Click to copy email address">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">Copy Email</span>
+            </button>
+            <a href="https://github.com/AICO24" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub ↗</a>
           </div>
         </div>
 
-        <!-- Sticky Section Navigation (Scroll-Spy) -->
-        <nav class="sidebar-nav" aria-label="Section navigation">
-          <ul class="nav-links">
-            <li><a href="#about" class="nav-link active"><span class="nav-indicator"></span>About</a></li>
-            <li><a href="#experience" class="nav-link"><span class="nav-indicator"></span>Experience</a></li>
-            <li><a href="#projects" class="nav-link"><span class="nav-indicator"></span>Projects</a></li>
-            <li><a href="#skills" class="nav-link"><span class="nav-indicator"></span>Tech Stack</a></li>
-            <li><a href="#certifications" class="nav-link"><span class="nav-indicator"></span>Certifications</a></li>
-          </ul>
-        </nav>
-
-        <!-- Social Connect Links -->
-        <section class="sidebar-section">
-          <h3 class="section-title">Connect</h3>
-          <ul class="social-list">
-            <li><a href="https://github.com/AICO24" target="_blank" rel="noopener noreferrer" class="social-link">GitHub ↗</a></li>
-            <li><a href="mailto:mjgochaico24@gmail.com" class="social-link">Email ↗</a></li>
-          </ul>
-        </section>
-
-        <!-- Theme Toggle -->
-        <div class="theme-toggle-wrapper">
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙 Switch Theme</button>
+        <!-- 3D Gaze-Tracking Avatar with Live Status -->
+        <div class="hero-avatar-area">
+          <div class="avatar-carousel" id="avatar-container" title="Click to cycle photo">
+            <div class="avatar-wrapper" id="avatar-wrapper">
+              <img src="assets/images/profile/profile1.1.jpg" alt="Manolo Gochaico Jr." class="avatar" id="profile-image" width="130" height="130" loading="eager">
+              <div class="avatar-glare" id="avatar-glare"></div>
+            </div>
+          </div>
+          
+          <div class="status-badge" aria-label="Current status: Available for junior roles and freelance">
+            <span class="status-dot"></span>
+            <span class="status-text">Available for Roles</span>
+          </div>
         </div>
       </div>
-    </aside>
+    </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- About Section -->
-      <section id="about" class="main-section">
-        <h2 class="main-title">About Me</h2>
-        <div class="about-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 28px;">
-          <p style="font-size: 1.05rem; line-height: 1.75; color: var(--text); margin-bottom: 16px;">
-            I am a 3rd-year college student and aspiring <strong>Full-Stack Web Developer</strong> with a strong commitment to building performant, modern, and user-focused digital experiences. I enjoy turning complex problems into intuitive web and mobile solutions.
-          </p>
-          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 16px;">
-            My technical focus centers on modern frontend architectures, clean state management, RESTful APIs, and relational databases. I believe in writing readable, maintainable code and continuously exploring new frameworks and architectural patterns.
-          </p>
-          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted);">
-            When I'm not writing code, I actively study emerging software patterns, refine personal projects, and contribute to developer learning communities.
-          </p>
-        </div>
-      </section>
+    <!-- Main Content Stream -->
+    <main class="main-content-flow">
 
-      <!-- Experience Section -->
-      <section id="experience" class="main-section">
-        <h2 class="main-title">Experience & Journey</h2>
-        <div class="experience-list">
-          <div class="experience-item">
-            <div class="experience-header">
-              <h3>School Projects & Academic Development</h3>
-              <span class="year">In Progress</span>
-            </div>
-            <p class="company">3rd Year College — Caloocan City</p>
-            <p class="description">Building foundational and intermediate engineering skills through university coursework, team collaborations, and real-world system requirements. Exploring full-stack lifecycles from architecture diagrams to database integration.</p>
-          </div>
-          <div class="experience-item">
-            <div class="experience-header">
-              <h3>Self-Directed Software Engineering</h3>
-              <span class="year">Ongoing</span>
-            </div>
-            <p class="company">Independent Practice</p>
-            <p class="description">Developing practical, scalable applications to master modern frontend and backend technologies. Emphasizing clean folder structures, modular vanilla JavaScript, responsive CSS design systems, and database relationships.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
+      <!-- 01 // PROJECTS SECTION -->
       <section id="projects" class="main-section">
-        <h2 class="main-title">Featured Projects</h2>
+        <div class="section-label">
+          <span class="section-num">01</span>
+          <span class="section-slash">//</span>
+          <span class="section-tag">PROJECTS</span>
+        </div>
+        <h2 class="main-title">Featured Work</h2>
+        
         <div class="projects-grid">
           <!-- Flagship Project 1: TindaMate -->
           <article class="project-card" data-title="TindaMate — Sari-Sari Store POS & Ledger" data-desc="TindaMate is a cross-platform mobile POS and store management application designed for micro-retail and sari-sari store owners. Built with React Native and Expo Router, it features an offline-friendly multi-item cart, dynamic inventory with Supabase image storage, an automated customer credit ('utang') ledger with debt settlement workflows, and aggregated COGS daily profit analytics backed by PostgreSQL with Row-Level Security (RLS)." data-img="assets/images/projects/tindamate/TindaMate_LOGO.png" data-link="https://github.com/AICO24/TindaMate">
@@ -186,48 +169,87 @@
         </div>
       </section>
 
-      <!-- Tech Stack Section -->
+      <!-- 02 // TECH STACK SECTION -->
       <section id="skills" class="main-section">
+        <div class="section-label">
+          <span class="section-num">02</span>
+          <span class="section-slash">//</span>
+          <span class="section-tag">TECH STACK</span>
+        </div>
         <h2 class="main-title">Skills & Technologies</h2>
-        <div class="tech-categories" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
-          <div class="tech-category-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;">
-            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-              <span>🌐</span> Frontend Development
-            </h4>
+
+        <div class="tech-categories">
+          <div class="tech-category-card">
+            <h4><span>🌐</span> Frontend Development</h4>
             <div class="tech-tags">
               <span class="tech-tag">HTML5</span>
               <span class="tech-tag">CSS3</span>
               <span class="tech-tag">JavaScript (ES6+)</span>
+              <span class="tech-tag">TypeScript</span>
               <span class="tech-tag">Responsive UI</span>
             </div>
           </div>
-          <div class="tech-category-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;">
-            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-              <span>⚙️</span> Backend & Scripting
-            </h4>
+          <div class="tech-category-card">
+            <h4><span>⚙️</span> Backend & Database</h4>
             <div class="tech-tags">
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Java</span>
-              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">PHP (MVC)</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Python (Flask)</span>
+              <span class="tech-tag">RESTful APIs</span>
             </div>
           </div>
-          <div class="tech-category-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 20px;">
-            <h4 style="font-size: 0.95rem; font-weight: 600; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
-              <span>📱</span> Mobile & Systems
-            </h4>
+          <div class="tech-category-card">
+            <h4><span>📱</span> Mobile & Tools</h4>
             <div class="tech-tags">
-              <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">C#</span>
+              <span class="tech-tag">React Native</span>
+              <span class="tech-tag">Expo Router</span>
+              <span class="tech-tag">Supabase</span>
               <span class="tech-tag">Git / GitHub</span>
+              <span class="tech-tag">System Architecture</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Certifications Section -->
+      <!-- 03 // EXPERIENCE & JOURNEY SECTION -->
+      <section id="experience" class="main-section">
+        <div class="section-label">
+          <span class="section-num">03</span>
+          <span class="section-slash">//</span>
+          <span class="section-tag">JOURNEY</span>
+        </div>
+        <h2 class="main-title">Experience & Milestones</h2>
+
+        <div class="experience-list">
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3>School Projects & Academic Development</h3>
+              <span class="year">In Progress</span>
+            </div>
+            <p class="company">3rd Year BSIT — Caloocan City</p>
+            <p class="description">Building foundational and intermediate engineering skills through university coursework, team collaborations, and real-world system requirements. Exploring full-stack lifecycles from architecture blueprints to relational database schema design.</p>
+          </div>
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3>Self-Directed Software Engineering</h3>
+              <span class="year">Ongoing</span>
+            </div>
+            <p class="company">Independent Practice</p>
+            <p class="description">Developing practical, scalable applications to master modern frontend and backend technologies. Emphasizing clean folder structures, modular vanilla JavaScript, responsive CSS design systems, and database relationships.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 // CERTIFICATIONS SECTION -->
       <section id="certifications" class="main-section">
-        <h2 class="main-title">Certifications & Credentials</h2>
+        <div class="section-label">
+          <span class="section-num">04</span>
+          <span class="section-slash">//</span>
+          <span class="section-tag">CREDENTIALS</span>
+        </div>
+        <h2 class="main-title">Certifications & Training</h2>
+
         <div class="certifications-grid">
           <div class="certification-card">
             <h3>Web Development Fundamentals</h3>
@@ -247,22 +269,65 @@
         </div>
       </section>
 
-      <!-- Beyond Coding Section -->
-      <section id="beyond" class="main-section">
-        <h2 class="main-title">Beyond Coding</h2>
-        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 26px;">
-          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 12px;">
-            Outside of programming, I focus on continuous personal development, studying emerging tech innovations, and collaborating with fellow student developers.
+      <!-- 05 // ABOUT ME SECTION -->
+      <section id="about" class="main-section">
+        <div class="section-label">
+          <span class="section-num">05</span>
+          <span class="section-slash">//</span>
+          <span class="section-tag">ABOUT</span>
+        </div>
+        <h2 class="main-title">Background & Philosophy</h2>
+
+        <div class="about-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 28px;">
+          <p style="font-size: 1.02rem; line-height: 1.75; color: var(--text); margin-bottom: 16px;">
+            I am a 3rd-year college student and aspiring <strong>Full-Stack Web Developer</strong> with a strong commitment to building performant, modern, and user-focused digital experiences. I enjoy turning complex business problems into intuitive web and mobile solutions.
+          </p>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 16px;">
+            My technical focus centers on modern frontend architectures, clean state management, RESTful APIs, and relational databases. I believe in writing readable, maintainable code and continuously exploring new frameworks and architectural patterns.
           </p>
           <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-muted);">
-            I believe that great software engineers combine technical execution with empathy, clear communication, and an eagerness to keep learning every day.
+            Outside of programming, I focus on continuous personal development, studying emerging tech innovations, and collaborating with fellow student developers. I believe that great software engineers combine technical execution with clear communication and an eagerness to keep learning every day.
           </p>
         </div>
       </section>
+
+      <!-- 06 // CONNECT & CONTACT SECTION -->
+      <section id="contact" class="main-section">
+        <div class="section-label">
+          <span class="section-num">06</span>
+          <span class="section-slash">//</span>
+          <span class="section-tag">CONNECT</span>
+        </div>
+        <h2 class="main-title">Let's Build Something Together</h2>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 28px;">
+          <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text); margin-bottom: 20px;">
+            I'm currently seeking junior developer positions, internships, and freelance projects where I can contribute and continue to grow. Whether you have a project in mind or just want to connect, feel free to reach out.
+          </p>
+          <div class="hero-actions" style="margin-top: 12px;">
+            <a href="mailto:mjgochaico24@gmail.com" class="btn btn-primary">Send Email ↗</a>
+            <a href="https://github.com/AICO24" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub Profile ↗</a>
+          </div>
+        </div>
+      </section>
+
     </main>
+
+    <!-- Minimalist Site Footer -->
+    <footer class="site-footer">
+      <div class="footer-copy">
+        <span>© 2026 Manolo Gochaico Jr.</span>
+        <span>•</span>
+        <span>All rights reserved.</span>
+      </div>
+      <div class="footer-tag">
+        Crafted with Vanilla JS &amp; Modern CSS
+      </div>
+    </footer>
+
   </div>
 
-  <!-- Project detail modal -->
+  <!-- Project Detail Modal -->
   <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="project-modal-title">
     <div class="modal-panel">
       <button id="modal-close" class="modal-close" aria-label="Close dialog">✕</button>

@@ -6,8 +6,9 @@ export function initTheme() {
 
   function updateToggleUI(isDark) {
     if (!themeToggle) return;
-    themeToggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    themeToggle.innerHTML = `<span class="theme-icon" aria-hidden="true">${isDark ? '☀️' : '🌙'}</span>`;
     themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeToggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
   }
 
   // Determine initial theme: localStorage -> system preference -> dark default

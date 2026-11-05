@@ -31,9 +31,9 @@ export function initAvatarTracker() {
   // Damping factor for smooth interpolation (lerp)
   const LERP_FACTOR = 0.09;
 
-  function onMouseMove(e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+  function updateCoordinates(clientX, clientY) {
+    mouseX = clientX;
+    mouseY = clientY;
 
     const rect = container.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
@@ -55,6 +55,14 @@ export function initAvatarTracker() {
     targetGlareX = 50 + normX * 35;
     targetGlareY = 50 + normY * 35;
     targetGlareOpacity = Math.min(0.55, Math.hypot(normX, normY) * 0.4 + 0.1);
+  }
+
+  function onMouseMove(e) {
+    updateCoordinates(e.clientX, e.clientY);
+  }
+
+  function onScroll() {
+    updateCoordinates(mouseX, mouseY);
   }
 
   function onMouseLeave() {
@@ -94,9 +102,9 @@ export function initAvatarTracker() {
 
   // Bind passive listeners
   window.addEventListener('mousemove', onMouseMove, { passive: true });
+  window.addEventListener('scroll', onScroll, { passive: true });
   document.addEventListener('mouseleave', onMouseLeave);
 
   // Initialize render loop
   requestAnimationFrame(renderLoop);
 }
-
