@@ -1,0 +1,21 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Log files
+*.log
+npm-debug.log*
+
+# Temporary files
+tmp/
+scratch/

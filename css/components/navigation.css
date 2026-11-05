@@ -1,0 +1,38 @@
+/* ===== Navigation & Social Links ===== */
+.social-list {
+  list-style: none;
+}
+
+.social-list li {
+  margin-bottom: 8px;
+}
+
+.social-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.social-list a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ===== Theme Toggle Control ===== */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.theme-toggle:hover {
+  background: var(--bg);
+  border-color: var(--accent);
+}

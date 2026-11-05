@@ -1,0 +1,93 @@
+/* ===== Layout Structure ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 0;
+  min-height: 100vh;
+}
+
+/* ===== Sidebar Container ===== */
+.sidebar {
+  background: var(--bg-card);
+  border-right: 1px solid var(--border);
+  padding: 40px 30px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-content {
+  flex: 1;
+}
+
+/* ===== Main Content Area ===== */
+.main-content {
+  padding: 60px 50px;
+  overflow-y: auto;
+}
+
+.main-section {
+  margin-bottom: 60px;
+}
+
+.main-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--text);
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.main-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ===== Layout Responsive Rules ===== */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 320px 1fr;
+  }
+
+  .main-content {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 30px 20px;
+  }
+
+  .main-content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 20px 16px;
+  }
+
+  .main-title {
+    font-size: 1.4rem;
+  }
+}

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Personal Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="layout">
@@ -14,7 +14,7 @@
         <!-- Profile Section -->
         <div class="profile-section">
           <div class="avatar-carousel">
-            <img src="assets/Profile1.png" alt="Profile photo" class="avatar" id="profile-image">
+            <img src="assets/images/profile/Profile1.png" alt="Profile photo" class="avatar" id="profile-image">
           </div>
           <h1 class="name">Manolo Jr, Gochaico A.</h1>
           <p class="title">3rd Year College Student</p>
@@ -100,24 +100,24 @@
       <section id="projects" class="main-section">
         <h2 class="main-title">Projects</h2>
         <div class="projects-grid">
-          <article class="project-card" data-title="Sample Project One" data-desc="A school project or practice work built to learn and explore. Showcases basic to intermediate skills." data-img="assets/SystemProject1.png" data-link="#">
-            <img src="assets/SystemArchitectureProject1.png" alt="Project 1" class="project-image">
+          <article class="project-card" data-title="Sample Project One" data-desc="A school project or practice work built to learn and explore. Showcases basic to intermediate skills." data-img="assets/images/projects/architecture/SystemArchitectureProject1.png" data-link="#">
+            <img src="assets/images/projects/architecture/SystemArchitectureProject1.png" alt="Project 1" class="project-image">
             <div class="project-info">
               <h3>System Architecture 1 Project</h3>
                 <p>Class project documenting system components and data flow. Includes diagrams and notes used to understand architecture decisions and trade-offs.</p>
               <a href="#" class="project-link">View</a>
             </div>
           </article>
-          <article class="project-card" data-title="Sample Project Two" data-desc="A learning-focused project demonstrating skills in problem-solving and practical implementation." data-img="assets/SystemProject2.png" data-link="#">
-            <img src="assets/SystemArchitectureProject2.png" alt="Project 2" class="project-image">
+          <article class="project-card" data-title="Sample Project Two" data-desc="A learning-focused project demonstrating skills in problem-solving and practical implementation." data-img="assets/images/projects/architecture/SystemProject2.png" data-link="#">
+            <img src="assets/images/projects/architecture/SystemArchitectureProject2.png" alt="Project 2" class="project-image">
             <div class="project-info">
               <h3>System Architecture 2 Project</h3>
                 <p>A hands-on exercise to implement modular components and simple integrations — focused on practical problem solving and documenting the process.</p>
               <a href="#" class="project-link">View</a>
             </div>
           </article>
-          <article class="project-card" data-title="Sample Project Three" data-desc="A hands-on project exploring both frontend and backend concepts with real-world scenarios." data-img="assets/MusicVideo.png" data-link="#">
-            <img src="assets/ProjectAnimation&VideoEditing.png" alt="Project 3" class="project-image">
+          <article class="project-card" data-title="Sample Project Three" data-desc="A hands-on project exploring both frontend and backend concepts with real-world scenarios." data-img="assets/images/projects/multimedia/MusicVideo.png" data-link="#">
+            <img src="assets/images/projects/multimedia/ProjectAnimation&VideoEditing.png" alt="Project 3" class="project-image">
             <div class="project-info">
               <h3>Music Video</h3>
                 <p>A multimedia project that combines animation and video editing. Shows skills in timing, sequencing, and presenting short-form media — useful for portfolio storytelling.</p>
@@ -162,7 +162,7 @@
   <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="project-modal-title">
     <div class="modal-panel">
       <button id="modal-close" class="modal-close" aria-label="Close dialog">✕</button>
-      <img id="modal-image" src="assets/project1.svg" alt="Project image" class="modal-image">
+      <img id="modal-image" src="assets/images/projects/architecture/SystemArchitectureProject1.png" alt="Project image" class="modal-image">
       <div class="modal-body">
         <h3 id="project-modal-title">Project title</h3>
         <p id="project-modal-desc" class="muted">Project description</p>
@@ -171,6 +171,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
