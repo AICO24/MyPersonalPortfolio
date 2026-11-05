@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <!-- Profile Section -->
+        <div class="profile-section">
+          <div class="avatar-carousel">
+            <img src="assets/Profile1.png" alt="Profile photo" class="avatar" id="profile-image">
+          </div>
+          <h1 class="name">Manolo Jr, Gochaico A.</h1>
+          <p class="title">3rd Year College Student</p>
+          <p class="location">Caloocan City, Philippines</p>
+        </div>
+
+        <!-- About Section -->
+        <section class="sidebar-section">
+          <h3 class="section-title">About</h3>
+          <p>I'm a 3rd year college student exploring the world of technology. I'm passionate about learning, building small projects, and improving my skills step by step. I enjoy both frontend and backend development, and I'm eager to grow through practice and real-world experience.</p>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="sidebar-section">
+          <h3 class="section-title">Tech Stack</h3>
+          <div class="tech-categories">
+            <div class="tech-category">
+              <h4>Frontend</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="tech-category">
+              <h4>Backend</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">Java</span>
+              </div>
+            </div>
+            <div class="tech-category">
+              <h4>Mobile</h4>
+              <div class="tech-tags">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">C#</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Social Links -->
+        <section class="sidebar-section">
+          <h3 class="section-title">Social Links</h3>
+          <ul class="social-list">
+            <li><a href="https://github.com/AICO24" target="_blank">GitHub</a></li>
+            <li><a href="mailto:mjgochaico24@gmail.com">Email</a></li>
+          </ul>
+        </section>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Experience Section -->
+      <section id="experience" class="main-section">
+        <h2 class="main-title">Experience</h2>
+        <div class="experience-list">
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3>School Projects & Learning</h3>
+              <span class="year">In Progress</span>
+            </div>
+            <p class="company">3rd Year College</p>
+            <p class="description">Focused on building foundational skills through coursework, group projects, and self-directed learning. Exploring both frontend and backend development.</p>
+          </div>
+          <div class="experience-item">
+            <div class="experience-header">
+              <h3>Self-Learning Projects</h3>
+              <span class="year">Ongoing</span>
+            </div>
+            <p class="company">Independent Study</p>
+            <p class="description">Building small practice projects to solidify concepts and explore new technologies. Focus on learning best practices and improving code quality.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="main-section">
+        <h2 class="main-title">Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card" data-title="Sample Project One" data-desc="A school project or practice work built to learn and explore. Showcases basic to intermediate skills." data-img="assets/SystemProject1.png" data-link="#">
+            <img src="assets/SystemArchitectureProject1.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+              <h3>System Architecture 1 Project</h3>
+                <p>Class project documenting system components and data flow. Includes diagrams and notes used to understand architecture decisions and trade-offs.</p>
+              <a href="#" class="project-link">View</a>
+            </div>
+          </article>
+          <article class="project-card" data-title="Sample Project Two" data-desc="A learning-focused project demonstrating skills in problem-solving and practical implementation." data-img="assets/SystemProject2.png" data-link="#">
+            <img src="assets/SystemArchitectureProject2.png" alt="Project 2" class="project-image">
+            <div class="project-info">
+              <h3>System Architecture 2 Project</h3>
+                <p>A hands-on exercise to implement modular components and simple integrations — focused on practical problem solving and documenting the process.</p>
+              <a href="#" class="project-link">View</a>
+            </div>
+          </article>
+          <article class="project-card" data-title="Sample Project Three" data-desc="A hands-on project exploring both frontend and backend concepts with real-world scenarios." data-img="assets/MusicVideo.png" data-link="#">
+            <img src="assets/ProjectAnimation&VideoEditing.png" alt="Project 3" class="project-image">
+            <div class="project-info">
+              <h3>Music Video</h3>
+                <p>A multimedia project that combines animation and video editing. Shows skills in timing, sequencing, and presenting short-form media — useful for portfolio storytelling.</p>
+                <a href="https://drive.google.com/drive/folders/1vm_ceo1kqJx2N8TPddtCnANfddtgWRMm?fbclid=IwY2xjawOsq99leHRuA2FlbQIxMABicmlkETFFRG1hT0NLSUhvOHdSbW0wc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHuty3uPGz7M-Y9txFy8AKqd82QD3OI7Cfi1R-6fTKRtFGRgIyeRJj3CFdd22_aem_zU500bJo-mysbWuSjb_fyg" class="project-link">View</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section id="certifications" class="main-section">
+        <h2 class="main-title">Certifications</h2>
+        <div class="certifications-grid">
+          <div class="certification-card">
+            <h3>Certification One</h3>
+            <p class="cert-issuer">Issuing Organization</p>
+            <p class="cert-year">2025</p>
+          </div>
+          <div class="certification-card">
+            <h3>Certification Two</h3>
+            <p class="cert-issuer">Issuing Organization</p>
+            <p class="cert-year">2025</p>
+          </div>
+          <div class="certification-card">
+            <h3>Certification Three</h3>
+            <p class="cert-issuer">Issuing Organization</p>
+            <p class="cert-year">2025</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Beyond Learning Section -->
+      <section id="beyond" class="main-section">
+        <h2 class="main-title">Beyond Coding</h2>
+        <p>When I'm not studying or coding, I focus on learning about emerging technologies, exploring different perspectives, and staying curious. I believe in balancing technical growth with personal development and community engagement.</p>
+        <p>I'm passionate about sharing knowledge, helping others learn, and being part of a supportive developer community.</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Project detail modal -->
+  <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="project-modal-title">
+    <div class="modal-panel">
+      <button id="modal-close" class="modal-close" aria-label="Close dialog">✕</button>
+      <img id="modal-image" src="assets/project1.svg" alt="Project image" class="modal-image">
+      <div class="modal-body">
+        <h3 id="project-modal-title">Project title</h3>
+        <p id="project-modal-desc" class="muted">Project description</p>
+        <p><a id="project-modal-link" href="#" target="_blank" rel="noopener">Open project</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
