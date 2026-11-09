@@ -1,6 +1,6 @@
-# Student Portfolio — Bryl Lim Inspired
+# Personal Portfolio — Manolo Jr. Gochaico A.
 
-A modern, clean, minimalist portfolio for 3rd year college students exploring the tech industry. Inspired by Bryl Lim's professional design style but tailored for a learning-focused presentation.
+A modern, high-performance minimalist portfolio for a Full-Stack Software Engineer. Features a 14rem fixed sidebar with live scroll-spy, dark/light theme persistence, interactive project modal showcase, and clean vanilla web architecture.
 
 ## Design Features
 
