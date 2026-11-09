@@ -4,6 +4,7 @@ export function initModal() {
   const modalTitle = document.getElementById('project-modal-title');
   const modalDesc = document.getElementById('project-modal-desc');
   const modalLink = document.getElementById('project-modal-link');
+  const modalGithub = document.getElementById('project-modal-github');
   const modalClose = document.getElementById('modal-close');
   let lastActiveElement = null;
 
@@ -17,6 +18,7 @@ export function initModal() {
     const desc = card.dataset.desc || cardParagraph || '';
     const img = card.dataset.img || card.querySelector('img')?.src || '';
     const link = card.dataset.link || card.querySelector('a')?.href || '#';
+    const github = card.dataset.github || '';
 
     // Populate modal tags
     const modalTags = document.getElementById('modal-tags');
@@ -37,9 +39,23 @@ export function initModal() {
     }
     if (modalTitle) modalTitle.textContent = title;
     if (modalDesc) modalDesc.textContent = desc;
+
+    // Primary project action (Live Demo or Main Link)
     if (modalLink) {
       modalLink.href = link;
       modalLink.style.display = link && link !== '#' ? 'inline-flex' : 'none';
+      modalLink.textContent = link.includes('github.com') ? 'View Source Code ↗' : 'Open Live Project ↗';
+    }
+
+    // Secondary action (GitHub repository link if different)
+    if (modalGithub) {
+      if (github && github !== link) {
+        modalGithub.href = github;
+        modalGithub.style.display = 'inline-flex';
+        modalGithub.textContent = 'View Source Code ↗';
+      } else {
+        modalGithub.style.display = 'none';
+      }
     }
 
     if (modal) {

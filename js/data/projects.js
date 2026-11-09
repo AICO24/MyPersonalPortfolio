@@ -15,13 +15,14 @@ export const projectsData = [
     id: "cemetery-ms",
     title: "Cemetery Management System with AI Forecast",
     category: "Full-Stack Web & AI Microservice",
-    tags: ["PHP", "MySQL", "JavaScript", "Python", "Flask", "REST API"],
+    tags: ["PHP", "MySQL", "JavaScript", "Python", "Flask", "REST API", "Live Capstone"],
     shortDesc: "An enterprise record, plot management, and booking platform powered by a PHP MVC REST backend, relational MySQL database with migration tracking, and a Python Flask AI microservice for lot capacity forecasting.",
     fullDesc: "A complete full-stack web application designed for municipal cemetery administration. It features role-based dashboards (Admin, Staff, Citizen), comprehensive decedent and plot records tracking, and automated burial scheduling. It integrates a dedicated Python Flask microservice that performs capacity saturation forecasting and plot allocation recommendations, designed with graceful degradation to maintain core availability when AI services are offline.",
     image: "assets/images/projects/cemetery-ms/CapstoneProject.jpg",
     modalImage: "assets/images/projects/cemetery-ms/CapstoneProject.jpg",
     github: "https://github.com/AICO24/CMS",
-    link: "https://github.com/AICO24/CMS"
+    link: "https://coderebels-cms.infinityfreeapp.com/frontend/index.html",
+    liveDemo: "https://coderebels-cms.infinityfreeapp.com/frontend/index.html"
   },
   {
     id: "system-architecture",
